@@ -62,6 +62,7 @@ class ChatMessageModel {
   /// How it works:
   /// Compares `status` against `MessageStatus.streaming`.
   bool get isStreaming => status == MessageStatus.streaming;
+
   bool get isUser => sender == MessageSender.user;
 
   /// What it is:
