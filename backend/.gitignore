@@ -1,0 +1,23 @@
+# backend/.gitignore
+
+# Dependencies
+node_modules/
+
+# Compiled Production Outputs
+dist/
+
+# Local Environment Secrets (NEVER COMMIT)
+.env
+.env.local
+*.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
