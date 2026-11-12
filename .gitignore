@@ -1,4 +1,73 @@
-# Miscellaneous
+# # Miscellaneous
+# *.class
+# *.log
+# *.pyc
+# *.swp
+# .DS_Store
+# .atom/
+# .buildlog/
+# .history
+# .svn/
+# migrate_working_dir/
+
+# # IntelliJ related
+# *.iml
+# *.ipr
+# *.iws
+# .idea/
+
+# # The .vscode folder contains launch configuration and tasks you configure in
+# # VS Code which you may wish to be included in version control, so this line
+# # is commented out by default.
+# #.vscode/
+
+# # Flutter/Dart/Pub related
+# **/doc/api/
+# **/ios/Flutter/.last_build_id
+# .dart_tool/
+# .flutter-plugins
+# .flutter-plugins-dependencies
+# .pub-cache/
+# .pub/
+# /build/
+
+# # Symbolication related
+# app.*.symbols
+
+# # Obfuscation related
+# app.*.map.json
+
+# # Android Studio will place build artifacts here
+# /android/app/debug
+# /android/app/profile
+# /android/app/release
+
+# # FVM Version Cache
+# .fvm/
+
+
+# ============================================================================
+# MONOREPO ROOT .gitignore (Flutter Frontend + Node.js/TypeScript Backend)
+# ============================================================================
+
+# --- Secrets & Environment Variables (CRITICAL: Protects GEMINI_API_KEY) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Node.js / TypeScript Backend Artifacts ---
+node_modules/
+dist/
+coverage/
+.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Miscellaneous ---
 *.class
 *.log
 *.pyc
@@ -10,18 +79,14 @@
 .svn/
 migrate_working_dir/
 
-# IntelliJ related
+# --- IntelliJ / Android Studio / VS Code ---
 *.iml
 *.ipr
 *.iws
 .idea/
+.vscode/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
+# --- Flutter / Dart / Pub Related ---
 **/doc/api/
 **/ios/Flutter/.last_build_id
 .dart_tool/
@@ -30,17 +95,22 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+frontend/build/
 
-# Symbolication related
+# --- Symbolication & Obfuscation ---
 app.*.symbols
-
-# Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
+# --- Android Studio Build Artifacts ---
 /android/app/debug
 /android/app/profile
 /android/app/release
+**/android/**/gradle-wrapper.jar
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
 
-# FVM Version Cache
+# --- FVM Version Cache ---
 .fvm/
